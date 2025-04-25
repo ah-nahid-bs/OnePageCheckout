@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\BS01089\\Documents\\PROJECTS\\OnePageCheckout-19\\onepagecheckout\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\OnePageCheckout.bundle.scp.css",
-      "PackagePath": "staticwebassets\\OnePageCheckout.oyzor88hby.bundle.scp.css"
+      "Id": "C:\\Users\\BS01089\\Documents\\PROJECTS\\OnePageCheckout-19\\onepagecheckout\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\OnePageCheckout.AspNetCore.bundle.scp.css",
+      "PackagePath": "staticwebassets\\OnePageCheckout.AspNetCore.565cgoviyz.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\BS01089\\Documents\\PROJECTS\\OnePageCheckout-19\\onepagecheckout\\wwwroot\\css\\site.css",
@@ -257,24 +257,24 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.OnePageCheckout.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.OnePageCheckout.AspNetCore.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.OnePageCheckout.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.OnePageCheckout.AspNetCore.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.OnePageCheckout.props",
-      "PackagePath": "build\\OnePageCheckout.props"
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.OnePageCheckout.AspNetCore.props",
+      "PackagePath": "build\\OnePageCheckout.AspNetCore.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.OnePageCheckout.props",
-      "PackagePath": "buildMultiTargeting\\OnePageCheckout.props"
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.OnePageCheckout.AspNetCore.props",
+      "PackagePath": "buildMultiTargeting\\OnePageCheckout.AspNetCore.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.OnePageCheckout.props",
-      "PackagePath": "buildTransitive\\OnePageCheckout.props"
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.OnePageCheckout.AspNetCore.props",
+      "PackagePath": "buildTransitive\\OnePageCheckout.AspNetCore.props"
     }
   ],
   "ElementsToRemove": []

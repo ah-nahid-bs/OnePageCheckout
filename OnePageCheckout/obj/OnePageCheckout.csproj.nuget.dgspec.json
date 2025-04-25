@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\BS01089\\Documents\\PROJECTS\\OnePageCheckout-19\\onepagecheckout\\OnePageCheckout.csproj",
-        "projectName": "OnePageCheckout",
+        "projectName": "OnePageCheckout.AspNetCore",
         "projectPath": "C:\\Users\\BS01089\\Documents\\PROJECTS\\OnePageCheckout-19\\onepagecheckout\\OnePageCheckout.csproj",
         "packagesPath": "C:\\Users\\BS01089\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\BS01089\\Documents\\PROJECTS\\OnePageCheckout-19\\onepagecheckout\\obj\\",

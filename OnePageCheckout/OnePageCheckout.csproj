@@ -4,6 +4,13 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>OnePageCheckout.AspNetCore</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Your Name</Authors>
+    <Company>Your Company</Company>
+    <Description>A modern, responsive one-page checkout solution for ASP.NET Core MVC applications</Description>
+    <PackageTags>checkout;ecommerce;aspnetcore;mvc</PackageTags>
   </PropertyGroup>
 
 </Project>

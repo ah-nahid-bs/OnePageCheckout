@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>OnePageCheckout.AspNetCore</id>
+        <version>1.0.0</version>
+        <title>One Page Checkout for ASP.NET Core</title>
+        <authors>Syed Ahsanul Huque Nahid</authors>
+        <description>A modern, responsive one-page checkout solution for ASP.NET Core MVC applications</description>
+        <tags>checkout, ecommerce, aspnetcore, mvc</tags>
+        <dependencies>
+            <group targetFramework="net9.0">
+                <dependency id="Microsoft.AspNetCore.App" version="9.0.0" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\net9.0\OnePageCheckout.dll" target="lib\net9.0" />
+        <file src="wwwroot\**\*" target="content\wwwroot" />
+        <file src="Views\**\*" target="content\Views" />
+    </files>
+</package>

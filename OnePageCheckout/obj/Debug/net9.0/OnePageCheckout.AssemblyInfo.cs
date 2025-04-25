@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("OnePageCheckout")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Your Company")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("A modern, responsive one-page checkout solution for ASP.NET Core MVC applications")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55b607e0ca098102b8878462931103aba26d670b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5324ab4cd5ac42fe5ca2f2709f07b05e705a90eb")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnePageCheckout")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnePageCheckout")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
