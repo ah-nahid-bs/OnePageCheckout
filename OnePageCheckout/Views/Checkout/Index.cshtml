@@ -1,0 +1,244 @@
+@model OnePageCheckout.Models.CheckoutViewModel
+
+<div class="container py-5">
+    <h2 class="mb-4 fw-bold text-primary">Checkout</h2>
+    
+    @using (Html.BeginForm("ProcessCheckout", "Checkout", FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+    {
+        <div class="row g-4">
+            <!-- Left Column -->
+            <div class="col-lg-8">
+                <!-- Progress Bar -->
+                <div class="progress mb-4" style="height: 3px;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 0%"></div>
+                </div>
+
+                <!-- Checkout Steps -->
+                <div class="accordion" id="checkoutAccordion">
+                    <!-- User Details Section -->
+                    <div class="accordion-item shadow-sm border-0 mb-3">
+                        <h2 class="accordion-header" id="userDetailsHeader">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#userDetailsCollapse">
+                                <i class="bi bi-person-circle me-2"></i>
+                                <span class="fw-semibold">1. User Details</span>
+                            </button>
+                        </h2>
+                        <div id="userDetailsCollapse" class="accordion-collapse collapse show" data-bs-parent="#checkoutAccordion">
+                            <div class="accordion-body bg-light">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(m => m.UserDetails.FirstName, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.UserDetails.FirstName, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.UserDetails.FirstName, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(m => m.UserDetails.LastName, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.UserDetails.LastName, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.UserDetails.LastName, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(m => m.UserDetails.Email, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.UserDetails.Email, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.UserDetails.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(m => m.UserDetails.PhoneNumber, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.UserDetails.PhoneNumber, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.UserDetails.PhoneNumber, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Details Section -->
+                    <div class="accordion-item shadow-sm border-0 mb-3">
+                        <h2 class="accordion-header" id="shippingDetailsHeader">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#shippingDetailsCollapse">
+                                <i class="bi bi-truck me-2"></i>
+                                <span class="fw-semibold">2. Shipping Details</span>
+                            </button>
+                        </h2>
+                        <div id="shippingDetailsCollapse" class="accordion-collapse collapse" data-bs-parent="#checkoutAccordion">
+                            <div class="accordion-body bg-light">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        @Html.LabelFor(m => m.ShippingDetails.AddressLine1, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.ShippingDetails.AddressLine1, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.ShippingDetails.AddressLine1, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-12">
+                                        @Html.LabelFor(m => m.ShippingDetails.AddressLine2, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.ShippingDetails.AddressLine2, new { @class = "form-control form-control-lg" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(m => m.ShippingDetails.City, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.ShippingDetails.City, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.ShippingDetails.City, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(m => m.ShippingDetails.State, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.ShippingDetails.State, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.ShippingDetails.State, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(m => m.ShippingDetails.PostalCode, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.ShippingDetails.PostalCode, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.ShippingDetails.PostalCode, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(m => m.ShippingDetails.Country, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.ShippingDetails.Country, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.ShippingDetails.Country, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Details Section -->
+                    <div class="accordion-item shadow-sm border-0 mb-3">
+                        <h2 class="accordion-header" id="paymentDetailsHeader">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#paymentDetailsCollapse">
+                                <i class="bi bi-credit-card me-2"></i>
+                                <span class="fw-semibold">3. Payment Details</span>
+                            </button>
+                        </h2>
+                        <div id="paymentDetailsCollapse" class="accordion-collapse collapse" data-bs-parent="#checkoutAccordion">
+                            <div class="accordion-body bg-light">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        @Html.LabelFor(m => m.PaymentDetails.PaymentMethod, new { @class = "form-label" })
+                                        @Html.DropDownListFor(m => m.PaymentDetails.PaymentMethod,
+                                            new SelectList(new[] { "Credit Card", "PayPal" }),
+                                            "Select Payment Method", new { @class = "form-select form-select-lg" })
+                                        @Html.ValidationMessageFor(m => m.PaymentDetails.PaymentMethod, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-12">
+                                        @Html.LabelFor(m => m.PaymentDetails.CardNumber, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.PaymentDetails.CardNumber, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.PaymentDetails.CardNumber, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-12">
+                                        @Html.LabelFor(m => m.PaymentDetails.CardHolderName, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.PaymentDetails.CardHolderName, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.PaymentDetails.CardHolderName, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(m => m.PaymentDetails.ExpiryDate, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.PaymentDetails.ExpiryDate, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.PaymentDetails.ExpiryDate, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-6">
+                                        @Html.LabelFor(m => m.PaymentDetails.CVV, new { @class = "form-label" })
+                                        @Html.TextBoxFor(m => m.PaymentDetails.CVV, new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(m => m.PaymentDetails.CVV, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Note Section -->
+                    <div class="accordion-item shadow-sm border-0">
+                        <h2 class="accordion-header" id="additionalNoteHeader">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#additionalNoteCollapse">
+                                <i class="bi bi-pencil-square me-2"></i>
+                                <span class="fw-semibold">4. Additional Note</span>
+                            </button>
+                        </h2>
+                        <div id="additionalNoteCollapse" class="accordion-collapse collapse" data-bs-parent="#checkoutAccordion">
+                            <div class="accordion-body bg-light">
+                                @Html.TextAreaFor(m => m.AdditionalNote, new { @class = "form-control form-control-lg", rows = "3", placeholder = "Add any special instructions or notes here..." })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Order Summary -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm border-0 position-sticky" style="top: 2rem;">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h4 class="card-title mb-0">
+                            <i class="bi bi-cart-check me-2"></i>Order Summary
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        @foreach (var item in Model.OrderSummary.Items)
+                        {
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <h6 class="mb-0">@item.ProductName</h6>
+                                    <small class="text-muted">Qty: @item.Quantity</small>
+                                </div>
+                                <span class="fw-bold">$@item.Total.ToString("F2")</span>
+                            </div>
+                        }
+                        <hr class="my-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Subtotal</span>
+                            <span>$@Model.OrderSummary.Subtotal.ToString("F2")</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Shipping</span>
+                            <span>$@Model.OrderSummary.ShippingCost.ToString("F2")</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-4">
+                            <span class="text-muted">Tax</span>
+                            <span>$@Model.OrderSummary.Tax.ToString("F2")</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center bg-light p-3 rounded">
+                            <span class="h5 mb-0">Total</span>
+                            <span class="h4 mb-0 text-primary">$@Model.OrderSummary.Total.ToString("F2")</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">
+                            <i class="bi bi-lock-fill me-2"></i>Complete Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        // Initialize Bootstrap validation
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+
+        // Update progress bar based on accordion sections
+        const accordionItems = document.querySelectorAll('.accordion-item')
+        const progressBar = document.querySelector('.progress-bar')
+        
+        function updateProgress() {
+            const totalSections = accordionItems.length
+            const completedSections = document.querySelectorAll('.accordion-collapse.show').length
+            const progress = (completedSections / totalSections) * 100
+            progressBar.style.width = `${progress}%`
+        }
+
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                setTimeout(updateProgress, 350)
+            })
+        })
+
+        // Initial progress update
+        updateProgress()
+    </script>
+}
