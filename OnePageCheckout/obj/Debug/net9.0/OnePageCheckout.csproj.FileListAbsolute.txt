@@ -95,3 +95,4 @@ C:\Users\BS01089\Documents\PROJECTS\OnePageCheckout-19\OnePageCheckout\obj\Debug
 C:\Users\BS01089\Documents\PROJECTS\OnePageCheckout-19\OnePageCheckout\obj\Debug\net9.0\OnePageCheckout.genruntimeconfig.cache
 C:\Users\BS01089\Documents\PROJECTS\OnePageCheckout-19\OnePageCheckout\obj\Debug\net9.0\ref\OnePageCheckout.dll
 C:\Users\BS01089\Documents\PROJECTS\OnePageCheckout-19\OnePageCheckout\obj\Debug\net9.0\compressed\7xvuk8t5vu-ty2tl5z8vc.gz
+C:\Users\BS01089\Documents\PROJECTS\OnePageCheckout-19\onepagecheckout\obj\Debug\net9.0\OnePageCheckout.sourcelink.json
